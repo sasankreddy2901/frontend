@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home - ShopKapilAgro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="../login/login.css">
+    <link rel="stylesheet" href="../components/cart.css">
+
+</head>
+
+<body>
+
+    <!-- Add this div near the top -->
+    <div id="navbar"></div>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner" id="home">
+        <div class="slideshow-container">
+            <div class="slide-background">
+                <div class="slide active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/2.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background/3.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background/6.JPG')">
+                </div>
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background/7.JPG')">
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 style="color: white;">Cultivating Green Excellence</h1>
+                <p>Premium Quality Plants & Expert Gardening Solutions</p>
+                <a href="#categories" class="cta-button">Explore Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- features -->
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-leaf feature-icon"></i>
+                <h3>Fresh Products</h3>
+                <p>100% fresh and naturally grown plants</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-box feature-icon"></i>
+                <h3>Safe Packaging</h3>
+                <p>Secure packaging for plant safety</p>
+
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shipping-fast feature-icon"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick and safe delivery to your doorstep</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-headset feature-icon"></i>
+                <h3>24/7 Support</h3>
+                <p>Expert assistance whenever you need</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🕽️ Anchor point for smooth scroll -->
+    <section id="categorySection" class="py-5">
+        <div class="container">
+            <h2 class="text-success fw-bold mb-4 text-center">🌾 Browse Categories</h2>
+            <div class="row" id="categoryContainer">
+                <!-- JS will inject category cards here -->
+            </div>
+            <div class="text-center mt-4" id="categoryPagination"></div>
+
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="choose-us">
+        <h2 class="section-title">Why Choose Us</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-award benefit-icon"></i>
+                <h3>Premium Quality</h3>
+                <p>All our plants are carefully selected and nurtured</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-hand-holding-heart benefit-icon"></i>
+                <h3>Expert Care</h3>
+                <p>Professional guidance for plant care</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-sync benefit-icon"></i>
+                <h3>Easy Returns</h3>
+                <p>Hassle-free return policy</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-shield-alt benefit-icon"></i>
+                <h3>Safe & Secure</h3>
+                <p>Guaranteed safe delivery</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <!-- Updated About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">Our Legacy Of Excellence</h2>
+                <!-- Updated content structure -->
+                <div class="legacy-features">
+                    <div class="legacy-feature">
+                        <i class="fas fa-globe-asia feature-icon"></i>
+                        <div class="feature-text">
+                            <h3>Extensive Network</h3>
+                            <p>Spanning over 1,000 acres of irrigated land with nationwide farm partnerships</p>
+                        </div>
+                    </div>
+                    <div class="legacy-feature">
+                        <i class="fas fa-seedling feature-icon"></i>
+                        <div class="feature-text">
+                            <h3>Advanced Cultivation</h3>
+                            <p>High-density plantations, polyhouses, and shade-net vertical farming</p>
+                        </div>
+                    </div>
+                    <div class="legacy-feature">
+                        <i class="fas fa-flask feature-icon"></i>
+                        <div class="feature-text">
+                            <h3>Research Excellence</h3>
+                            <p>State-of-the-art laboratories for soil and leaf diagnostics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-slideshow">
+                <div class="slide-wrapper">
+                    <div class="about-slide active" style="background-image: url('../images/smart-fram.jpg')">
+                        <div class="slide-content">
+                            <h3>Modern Research Lab</h3>
+                            <p>Advanced testing and research facilities</p>
+                        </div>
+                    </div>
+                    <div class="about-slide" style="background-image: url('../images/modran-img.jpg')">
+                        <div class="slide-content">
+                            <h3>Smart Farming</h3>
+                            <p>Technology-driven cultivation methods</p>
+                        </div>
+                    </div>
+                    <div class="about-slide" style="background-image: url('../images/2.JPG')">
+                        <div class="slide-content">
+                            <h3>Quality Assurance</h3>
+                            <p>Rigorous quality control processes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-controls">
+                    <button class="slide-dot active" data-slide="0"></button>
+                    <button class="slide-dot" data-slide="1"></button>
+                    <button class="slide-dot" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- testimonoal -->
+    <!-- Testimonials -->
+    <section class="testimonials" id="customer-reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial-track">
+                <!-- Original Testimonials -->
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Excellent quality plants and amazing service. The packaging was
+                        perfect and plants arrived in great condition. The team was very helpful in providing care
+                        instructions."</p>
+                    <div class="testimonial-author">
+                        <img src="../images/head.png" alt="Rajesh Kumar" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Rajesh</h4>
+                            <p class="author-location">Kurnool</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Very satisfied with my purchase. The plants are healthy and growing
+                        well. Their expert advice helped me maintain my garden beautifully. Great customer service!"</p>
+                    <div class="testimonial-author">
+                        <img src="../images/h-head.jpg" alt="" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Mahesh</h4>
+                            <p class="author-location">Warangal</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Best nursery I've dealt with. Their selection of medicinal plants is
+                        impressive, and the quality is outstanding. Will definitely order again!"</p>
+                    <div class="testimonial-author">
+                        <img src="../images/g-head.png" alt="" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Lalith</h4>
+                            <p class="author-location">Tirupathi</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Additional Testimonials -->
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"The fruit plants I ordered are thriving in my garden. Their
+                        after-sale support and gardening tips have been invaluable. Highly recommend their services!"
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="/./images/g1.jpg" alt="Ramya" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Ramya</h4>
+                            <p class="author-location">Vijayawada</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Amazing collection of ornamental plants! The delivery was prompt and
+                        the plants were perfectly packaged. The staff is knowledgeable and friendly."</p>
+                    <div class="testimonial-author">
+                        <img src="../images/h2-head.png" alt="Arjun Sharma" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Charan</h4>
+                            <p class="author-location">Kakinada</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Their collection of medicinal plants is exceptional. Everything I
+                        ordered was fresh and healthy. The care instructions provided were very helpful for a beginner
+                        like me."</p>
+                    <div class="testimonial-author">
+                        <img src="../images/h3-head.jpg" alt="Naveen Kumar" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Naveen</h4>
+                            <p class="author-location">Khammam</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Duplicate first few cards for seamless loop -->
+                <div class="testimonial-card">
+                    <p class="testimonial-content">"Excellent quality plants and amazing service. The packaging was
+                        perfect and plants arrived in great condition. The team was very helpful in providing care
+                        instructions."</p>
+                    <div class="testimonial-author">
+                        <img src="../images/h-head.jpg" alt="Rajesh Kumar" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Siva</h4>
+                            <p class="author-location">Hyderabad</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">What types of products do you sell?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>We offer a wide range of horticultural, ornamental, and medicinal plants, including fruit trees,
+                        vegetable seedlings, flowering plants, rare exotic plants, herbs, and bio-fertilizers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Are your plants suitable for all climates?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we provide climate-specific plants with detailed care instructions to help customers choose
+                        the best options for their location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Do you offer bulk discounts?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we provide special discounts on bulk purchases for nurseries, landscapers, farmers, and
+                        wholesale buyers.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">Do you provide consultation for plant care?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we offer free basic guidance through WhatsApp and email. Advanced consultation services are
+                        available for large-scale gardening and farming.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">What is your return policy?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <p>We accept returns only for damaged or incorrect products. Live plants are not eligible for return
+                        unless they arrive in poor condition.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="question-text">How can I contact customer support?</span>
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </span>
+                </button>
+                <div class="faq-answer">
+                    <div class="contact-info">
+                        <p>You can reach us through:</p>
+                        <ul>
+                            <li><i class="fab fa-whatsapp"></i> WhatsApp: 9154669035</li>
+                            <li><i class="far fa-envelope"></i> Email: kapilagro@kapilgroup.com</li>
+                            <li><i class="fas fa-phone"></i> Phone: 9154669033</li>
+                            <li><i class="far fa-comment-dots"></i> Live Chat: Available on our website</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content" id="Contact">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +91-9154669035<br>&nbsp;&nbsp;&nbsp;&nbsp; +91-9154669033</p>
+                <p><i class="fas fa-envelope"></i> anjireddy@kapilagro.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sy. No. 121, Sriram Nagar Village,Moinabad Mandal,
+                    Hyderabad,Telangana, India - 500075</p>
+                <div class="footer-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3810.058836807959!2d78.26801797489195!3d17.26438820633746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbc08d537bfcc9%3A0xa4e5a5dc8bcb9c6f!2sKapil%20Agro%20Farms!5e0!3m2!1sen!2sin!4v1739809848679!5m2!1sen!2sin"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="footer-social-section">
+                <h3>Follow Us On</h3>
+                <div class="social-icons">
+                    <a href="https://wa.me/919154669035" target="_blank" class="social-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/kapilagro" target="_blank" class="social-icon instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/kapilagro" target="_blank" class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/kapilagro" target="_blank" class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section" style="flex-grow: 1; margin-top: 20px;">
+                <h3>Business Hours</h3>
+                <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+            <!-- <div class="footer-section">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new products and special offers.</p>
+          <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email"
+                  style="color: black;background-color: whitesmoke;">
+              <button type="submit">Subscribe</button>
+          </form>
+      </div> -->
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Kapil Agro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- footer -->
+
+
+    <!-- 🟢 Register Modal -->
+    <div id="registerModal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h3 class="form-title">Register for ShopKapilAgro</h3>
+            <form id="registerForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <div class="input-group">
+                        <input type="tel" class="form-control" id="phone" required placeholder="e.g. 9876543210">
+                        <button type="button" class="btn btn-green" id="sendOtpBtn">Get OTP</button>
+                    </div>
+                </div>
+                <div class="mb-3" id="otpSection" style="display: none;">
+                    <label for="otp" class="form-label">Enter OTP</label>
+                    <input type="text" class="form-control" id="otp" placeholder="6-digit OTP">
+                </div>
+                <button type="submit" class="btn btn-green w-100" id="registerBtn" style="display: none;">Verify &
+                    Register</button>
+                <div id="registerMessage" class="message text-center mt-2"></div>
+            </form>
+            <p class="text-center mt-2">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            <button class="btn-close-modal" onclick="closeRegister()">✖</button>
+        </div>
+    </div>
+
+
+
+    <!-- Scripts faq -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function initFAQ() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    item.classList.toggle('active');
+
+                    if (!isActive) {
+                        item.classList.add('fade-in-scale');
+                        setTimeout(() => item.classList.remove('fade-in-scale'), 300);
+                    }
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+        function showRegister() {
+            document.getElementById('registerModal').style.display = 'flex';
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        function closeRegister() {
+            document.getElementById('registerModal').style.display = 'none';
+        }
+
+        function switchToRegister() {
+            closeLogin();
+            showRegister();
+        }
+
+        function switchToLogin() {
+            closeRegister();
+            showLogin();
+        }
+
+    </script>
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginModal').style.display = 'flex';
+        }
+        function closeLogin() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+    </script>
+
+    <script>
+        fetch('../components/login-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+
+    <!-- 🔐 Fetch Navbar + Display User Info + Cart Count -->
+    <script>
+        fetch('../components/navbar.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+
+                // Use a tiny delay to let the new DOM elements load
+                setTimeout(() => {
+                    const userName = localStorage.getItem("userName");
+                    const userId = localStorage.getItem("userId");
+                    const loginBtn = document.getElementById("loginBtn");
+                    const nameElement = document.getElementById("welcomeName");
+
+                    // ✅ Show username if available
+                    if (userName && nameElement) {
+                        nameElement.textContent = `👋 ${userName}`;
+                    }
+
+                    // ✅ Toggle Login ↔ Logout
+                    if (userId && loginBtn) {
+                        loginBtn.textContent = "Logout";
+                        loginBtn.onclick = logout;
+                    } else if (loginBtn) {
+                        loginBtn.textContent = "Login";
+                        loginBtn.onclick = showLogin;
+                    }
+
+                    // ✅ Update cart count
+                    if (userId) {
+                        const token = localStorage.getItem("token");
+                        fetch(`http://localhost:8080/user/cart/${userId}`,{
+                            headers: {
+                                  "Authorization": `Bearer ${token}`
+                                 }
+                        })
+                            .then(res => res.json())
+                            .then(items => {
+                                const badge = document.getElementById("cartCountBadge");
+                                if (badge) {
+                                    badge.textContent = items.length;
+                                    badge.style.display = items.length > 0 ? 'inline-block' : 'none';
+                                }
+                            })
+                            .catch(err => console.error("Failed to load cart count:", err));
+                    }
+                }, 100); // Delay for DOM render
+            });
+
+        function logout() {
+            localStorage.clear();
+            window.location.reload();
+        }
+
+        function showLogin() {
+            const modal = document.getElementById("loginModal");
+            if (modal) modal.style.display = "flex";
+        }
+    </script>
+
+    <script>
+        // Inject Cart Modal at end of body
+        fetch('../components/cart-modal.html')
+            .then(res => res.text())
+            .then(html => {
+                document.body.insertAdjacentHTML('beforeend', html);
+            });
+    </script>
+
+
+
+    <script src="home.js"></script>
+    <script src="../login/login.js"></script>
+    <script src="../Register/register.js"></script>
+    <script src="../products/products.js"></script>
+    <script src="../components/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

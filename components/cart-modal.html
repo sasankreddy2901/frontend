@@ -1,0 +1,19 @@
+<!-- ✅ cart-modal.html -->
+<div id="cartModal" class="modal-overlay" style="display: none;">
+  <div class="modal-content cart-modal">
+    <h4 class="mb-3 text-center">🛒 Your Cart</h4>
+    <div id="cartItemsContainer" class="cart-items">
+      <!-- js will inject the items  -->
+    </div>
+    
+    <div class="cart-summary mt-4 text-end">
+      <h5><strong>Total: ₹<span id="cartTotalAmount">0.00</span></strong></h5>
+    
+      <div class="d-flex justify-content-between mt-3">
+        <button class="btn btn-outline-danger" onclick="closeCart()">Close</button>
+        <button id="checkoutBtn" class="btn btn-success">Proceed to Checkout</button>
+      </div>
+    </div>
+    
+  </div>
+</div>

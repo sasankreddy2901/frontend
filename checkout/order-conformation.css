@@ -1,0 +1,50 @@
+
+body {
+  background-color: #f8f9fa;
+}
+
+.confirmation-card {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  font-size: 64px;
+  color: #28a745;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 25px;
+  color: #155724;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.detail-value {
+  color: #333;
+}
+
+.shipping-address p {
+  margin: 0;
+}
+
+.btn-group {
+  margin-top: 30px;
+  text-align: center;
+}

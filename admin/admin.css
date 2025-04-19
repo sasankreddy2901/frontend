@@ -1,0 +1,23 @@
+admin/admin.css body {
+  background-color: #f5fff5;
+  /* soft green shade for agro theme */
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #2f7d2f;
+}
+
+.btn-success {
+  background-color: #2f9e44;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #278a3a;
+}

@@ -1,0 +1,253 @@
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  </head>
+</html>
+<!-- Main Header -->
+<header class="main-header">
+  <div class="header-content">
+      <a href="#" class="logo">
+          <img src="../images/kapil agro logo.png" alt="Kapil Agro Logo" class="brand-logo">
+          <span>Kapil Agro</span>
+          <img src="../images/enhanced_kapil_group_logo.png" alt="Kapil Group Logo" class="brand-logo">
+      </a>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <i class="fas fa-bars" id="menuIcon"></i>
+          <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+      </button>
+
+      <nav class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#categories">Products</a>
+          <a href="#about">About Us</a>
+          <a href="#Contact">Contact</a>
+
+          <a href="#" onclick="toggleCart()" class="cart-link">
+              <div class="cart-badge">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span id="cartCountBadge" class="cart-count" style="display: none;">0</span>
+              </div>
+              <span>Cart</span>
+          </a>
+          
+            <span id="welcomeName" class="text-white fw-semibold"></span>
+          <button id="loginBtn" class="login-btn">Login</button>
+      </nav>
+
+  </div>
+</header>
+
+<!-- here header -->
+
+
+<!-- styling starts here -->
+<style>
+
+:root {
+            --primary-green: #2D5A27;
+            --secondary-green: #4A7856;
+            --dark-green: #1A3A1A;
+            --light-green: #98DDB6;
+            --beige: #FFF8F0;
+            --brown: #3D2B1F;
+            --orange: #FF6B01;
+            --gradient-green: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--beige);
+            color: var(--brown);
+        }
+  .main-header {
+       
+       padding: 15px 0;
+     
+       position: sticky;
+       top: 0;
+       z-index: 100;
+       transition: all 0.3s ease;
+       backdrop-filter: blur(10px);
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+       background: linear-gradient(135deg, #1A3A1A, #2D5A27);
+
+   }
+
+   .main-header.scrolled {
+       padding: 10px 0;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+   }
+
+   .header-content {
+       max-width: 100%;
+       margin: 0 auto;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 15px;
+   }
+
+   .logo {
+       display: flex;
+       align-items: center;
+       text-decoration: none;
+       color: white;
+       font-size: 40px;
+       font-weight: 700;
+       gap: 10px;
+   }
+
+   .brand-logo {
+       height: 64px;
+       filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+       transition: all 0.3s ease;
+      
+   }
+
+   .main-header.scrolled .brand-logo {
+       height: 50px;
+   }
+
+   /* Navigation Menu */
+   .nav-menu {
+       display: flex;
+       align-items: center;
+       gap: 30px;
+   }
+
+   /* Cart badge */
+   .cart-badge {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #FF6B01;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+   .nav-menu a {
+       color: white;
+       text-decoration: none;
+       font-weight: 600;
+       text-transform: uppercase;
+       letter-spacing: 0.5px;
+       font-size: 17px;
+       position: relative;
+       transition: color 0.3s;
+   }
+   .login-btn {
+            background: white;
+            color: var(--primary-green);
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .login-btn:hover {
+            background: var(--dark-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+   /* Mobile Menu Styles */
+   .mobile-menu-toggle {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            background: none;
+            border: none;
+            padding: 0;
+            margin-left: auto;
+        }
+
+        .mobile-menu-toggle i {
+            color: var(--primary-green);
+            font-size: 24px;
+        }
+
+
+</style>
+
+<script>
+  // Mobile menu functionality
+  document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+
+            // Toggle mobile menu
+            mobileMenuToggle.addEventListener('click', function () {
+                navMenu.classList.toggle('active');
+
+                // Toggle icon visibility
+                if (navMenu.classList.contains('active')) {
+                    menuIcon.style.display = 'none';
+                    closeIcon.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target) && navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    navMenu.classList.remove('active');
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+</script>

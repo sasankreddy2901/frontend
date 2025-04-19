@@ -1,0 +1,37 @@
+<!-- 🔐 Login Modal -->
+<div id="loginModal" class="modal-overlay" style="display: none;">
+  <div class="modal-content">
+    <h3 class="form-title">Login to ShopKapilAgro</h3>
+    <form id="loginForm">
+      
+      <!-- 📞 Phone Input -->
+      <div class="mb-3">
+        <label for="loginPhone" class="form-label">Phone Number</label>
+        <div class="input-group">
+          <input type="tel" class="form-control" id="loginPhone" required placeholder="e.g. 9876543210">
+          <button type="button" class="btn btn-green" id="loginSendOtpBtn">Get OTP</button>
+        </div>
+      </div>
+
+      <!-- 🔑 OTP Section -->
+      <div class="mb-3" id="loginOtpSection" style="display: none;">
+        <label for="loginOtp" class="form-label">Enter OTP</label>
+        <input type="text" class="form-control" id="loginOtp" placeholder="6-digit OTP">
+      </div>
+
+      <!-- ✅ Login Button -->
+      <button type="submit" class="btn btn-green w-100" id="loginSubmitBtn" style="display: none;">Verify & Login</button>
+
+      <!-- 📢 Message Area -->
+      <div id="loginMessage" class="message text-center mt-2"></div>
+    </form>
+
+    <!-- 🔄 Switch to Register -->
+    <p class="text-center mt-2">
+      Don't have an account? <a href="#" onclick="switchToRegister()">Register</a>
+    </p>
+
+    <!-- ❌ Close Button -->
+    <button class="btn-close-modal" onclick="closeLogin()">✖</button>
+  </div>
+</div>
