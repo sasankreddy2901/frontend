@@ -22,6 +22,7 @@ async function loadProductPage(page) {
   try {
     const res = await fetch(`${BASE_API_URL}/user/products/paged/category/${categoryId}?page=${page}&size=${productPageSize}`);
     const products = await res.json();
+    console.log(products);
 
     productContainer.innerHTML = '';
 
