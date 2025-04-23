@@ -1,3 +1,5 @@
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 document.addEventListener('DOMContentLoaded', async () => {
   const cartContainer = document.getElementById("cartItems");
   const totalAmountEl = document.getElementById("totalAmount");
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   try {
-    const res = await fetch(`http://localhost:8080/user/cart/${userId}`, {
+    const res = await fetch(`${BASE_API_URL}/user/cart/${userId}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }
@@ -70,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
     // Fetch order count for discount logic
-    const orderCountRes = await fetch(`http://localhost:8080/user/orders/customer-count/${userId}`, {
+    const orderCountRes = await fetch(`${BASE_API_URL}/user/orders/customer-count/${userId}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }
@@ -156,7 +158,7 @@ async function createOrderAndPay() {
     const applyDiscount = discountPercent > 0;
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:8080/user/payments/checkout", {
+    const res = await fetch(`${BASE_API_URL}/user/payments/checkout`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -209,7 +211,7 @@ async function createOrderAndPay() {
 async function verifyPayment(razorpayResponse, paymentId, orderId) {
   try {
     const token = localStorage.getItem("token");
-    const res = await fetch("http://localhost:8080/user/payments/verify", {
+    const res = await fetch(`${BASE_API_URL}/user/payments/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -247,7 +249,7 @@ async function verifyPayment(razorpayResponse, paymentId, orderId) {
 async function downloadInvoice(invoiceId) {
   try {
     const token = localStorage.getItem("token");
-    const response = await fetch(`http://localhost:8080/user/payments/invoice/${invoiceId}`, {
+    const response = await fetch(`${BASE_API_URL}/user/payments/invoice/${invoiceId}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }

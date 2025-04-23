@@ -1,3 +1,5 @@
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const orderId = urlParams.get('id');
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
       
-        const response = await fetch(`http://localhost:8080/user/orders/${orderId}`, {
+        const response = await fetch(`${BASE_API_URL}/user/orders/${orderId}`, {
             headers: {
               "Authorization": `Bearer ${token}`
             }
@@ -101,7 +103,7 @@ async function downloadInvoice(invoiceId) {
   }
 
   try {
-    const response = await fetch(`http://localhost:8080/user/invoice/${invoiceId}/pdf`, {
+    const response = await fetch(`${BASE_API_URL}/user/invoice/${invoiceId}/pdf`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`

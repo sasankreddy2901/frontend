@@ -1,3 +1,5 @@
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 const phoneInput = document.getElementById('phone');
 const sendOtpBtn = document.getElementById('sendOtpBtn');
 const otpSection = document.getElementById('otpSection');
@@ -28,7 +30,7 @@ sendOtpBtn.addEventListener('click', async () => {
   const payload = { name, email, phoneNo: phone };
 
   try {
-    const res = await fetch('http://localhost:8080/user/register', {
+    const res = await fetch(`${BASE_API_URL}/user/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -74,7 +76,7 @@ registerForm.addEventListener('submit', async (e) => {
   };
 
   try {
-    const res = await fetch('http://localhost:8080/user/verify-registration', {
+    const res = await fetch(`${BASE_API_URL}/user/verify-registration`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
