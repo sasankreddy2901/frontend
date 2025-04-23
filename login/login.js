@@ -87,7 +87,7 @@ function bindLoginEvents() {
        
       showMessage("Login successful! Redirecting...", 'success');
 
-      setTimeout(() => window.location.href = '../home/home.html', 2000);
+      setTimeout(() => window.location.href = '../index.html', 2000);
     } else {
       showMessage("Login failed. Please try again.", 'danger');
     }
