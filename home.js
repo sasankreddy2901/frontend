@@ -1,4 +1,4 @@
-import BASE_API_URL from '../frontend/config/config'
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
 
 let currentPage = 0;
 const pageSize = 6;
