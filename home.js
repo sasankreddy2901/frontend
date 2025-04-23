@@ -1,3 +1,5 @@
+import BASE_API_URL from '../frontend/config/config'
+
 let currentPage = 0;
 const pageSize = 6;
 
@@ -6,7 +8,7 @@ async function fetchCategories(page) {
   const pagination = document.getElementById('categoryPagination');
 
   try {
-    const res = await fetch(`http://localhost:8080/user/categories/paged?page=${page}&size=${pageSize}`);
+    const res = await fetch(`${BASE_API_URL}/user/categories/paged?page=${page}&size=${pageSize}`);
     const categories = await res.json();
 
     container.innerHTML = '';
