@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 const phoneInput = document.getElementById('phone');
 const sendOtpBtn = document.getElementById('sendOtpBtn');

@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);

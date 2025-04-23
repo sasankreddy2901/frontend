@@ -1,5 +1,5 @@
 // code for the cart icon in the navbar
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 function toggleCart() {
   const userId = localStorage.getItem("userId");
