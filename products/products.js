@@ -1,3 +1,4 @@
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
 
 const productContainer = document.getElementById('productContainer');
 const paginationContainer = document.getElementById('productPagination');
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadProductPage(page) {
   try {
-    const res = await fetch(`http://localhost:8080/user/products/paged/category/${categoryId}?page=${page}&size=${productPageSize}`);
+    const res = await fetch(`${BASE_API_URL}/user/products/paged/category/${categoryId}?page=${page}&size=${productPageSize}`);
     const products = await res.json();
 
     productContainer.innerHTML = '';
@@ -96,7 +97,7 @@ async function updateCartCount(userId) {
   }
 
   try {
-    const res = await fetch(`http://localhost:8080/user/cart/${userId}`, {
+    const res = await fetch(`${BASE_API_URL}/user/cart/${userId}`, {
       headers: {
         "Authorization": `Bearer ${token}`
       }
@@ -132,7 +133,7 @@ async function addToCart(productId) {
   }
 
   try {
-    const response = await fetch("http://localhost:8080/user/cart/add", {
+    const response = await fetch(`${BASE_API_URL}/user/cart/add`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,4 +1,5 @@
 // code for the cart icon in the navbar
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
 
 function toggleCart() {
   const userId = localStorage.getItem("userId");
@@ -16,7 +17,7 @@ function toggleCart() {
   cartContainer.innerHTML = "";
   cartTotal.textContent = "0.00";
 
-  fetch(`http://localhost:8080/user/cart/${userId}`, {
+  fetch(`${BASE_API_URL}/user/cart/${userId}`, {
     method: 'GET',
     headers: {
       "Content-Type": "application/json",
@@ -94,7 +95,7 @@ async function updateQuantity(userId, productId) {
   }
 
   try {
-    const res = await fetch(`http://localhost:8080/user/cart/update?userId=${userId}&productId=${productId}&quantity=${quantity}`, {
+    const res = await fetch(`${BASE_API_URL}/user/cart/update?userId=${userId}&productId=${productId}&quantity=${quantity}`, {
       method: 'PUT',
       headers: {
         "Authorization": `Bearer ${token}`
@@ -122,7 +123,7 @@ async function removeItem(userId, productId) {
   }
   
   try {
-    await fetch(`http://localhost:8080/user/cart/remove?userId=${userId}&productId=${productId}`, {
+    await fetch(`${BASE_API_URL}/user/cart/remove?userId=${userId}&productId=${productId}`, {
       method: 'DELETE',
       headers: {
         "Authorization": `Bearer ${token}`

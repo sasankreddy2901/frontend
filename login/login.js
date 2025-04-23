@@ -1,3 +1,5 @@
+const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 document.addEventListener("DOMContentLoaded", () => {
   const checkModalLoaded = setInterval(() => {
     const phoneInput = document.getElementById('loginPhone');
@@ -35,7 +37,7 @@ function bindLoginEvents() {
     loginBtn.style.display = 'none';
 
     try {
-      const res = await fetch('http://localhost:8080/user/login', {
+      const res = await fetch(`${BASE_API_URL}/user/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phoneNo: phone })
@@ -65,7 +67,7 @@ function bindLoginEvents() {
     if (!otp) return showMessage('Please enter the OTP.', 'danger');
 
     try {
-      const res = await fetch('http://localhost:8080/user/verify-login', {
+      const res = await fetch(`${BASE_API_URL}/user/verify-login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ phoneNo: tempPhone, otp: otp })
