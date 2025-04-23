@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 let currentPage = 0;
 const pageSize = 6;

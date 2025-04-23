@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const checkModalLoaded = setInterval(() => {

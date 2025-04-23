@@ -1,4 +1,4 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+
 
 const productContainer = document.getElementById('productContainer');
 const paginationContainer = document.getElementById('productPagination');
