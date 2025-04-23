@@ -1,1 +1,1 @@
-const BASE_API_URL = "https://kapilagroshopnew.onrender.com";
+var BASE_API_URL = "https://kapilagroshopnew.onrender.com";
